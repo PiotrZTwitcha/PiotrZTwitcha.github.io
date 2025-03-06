@@ -53,31 +53,121 @@ footer {
     color: white;
     padding: 10px 0;
 }
+   .ramka {
+            border: 2px solid black; /* Grubość i kolor ramki */
+            padding: 10px; /* Odstęp między tekstem a ramką */
+            display: inline-block; /* Aby ramka otaczała tylko tekst */
+        }
 
+    .centered-text {
+            text-align: center; /* Wyśrodkowanie poziome */
+        }
+
+    /* Formularz */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Mapa Google */
+        .map-container {
+            margin-top: 30px;
+        }
+
+        /* Responsywność mapy */
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+
+        /* Kontener formularza */
+        .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+            font-size: 16px;
+        }
+</style>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona główna mojego projektu">
+    <title>Witaj na mojej stronie o Bielsku-Białej!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kontakt</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="about.html">O mnie</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="projects.html">Projekty</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+    <!-- Formularz kontaktowy -->
+    <div class="contact-form">
+        <h2>Skontaktuj się z nami</h2>
+        <form action="/submit-form" method="post">
+            <!-- Imię i nazwisko -->
+            <label for="name">Imię i nazwisko:</label>
+            <input type="text" id="name" name="name" placeholder="Wpisz swoje imię i nazwisko" required>
+
+            <!-- Adres e-mail -->
+            <label for="email">Adres e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Wpisz swój e-mail" required>
+
+            <!-- Wiadomość -->
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Wpisz swoją wiadomość" required></textarea>
+
+            <!-- Przycisk wysyłania -->
+            <button type="submit">Wyślij wiadomość</button>
+        </form>
+    </div>
+
+    <!-- Mapa lokalizacji -->
+    <div class="map-container">
+        <h2>Nasza lokalizacja</h2>
+        <!-- Osadzenie mapy Google -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.7760240791936!2d19.03720001550983!3d49.83110067936604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713a84514b5cf29%3A0x38b162c1f7038778!2sV%20Liceum%20Og%C3%B3lnokszta%C5%82c%C4%85ce%20im.%20Mieczys%C5%82awa%20G%C3%B3rczy%C5%84skiego!5e0!3m2!1spl!2spl!4v1649304480719!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+</body>
+</html>
     </style>
     
     
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Strona o Bielsku-Białej i o mnie">
-    <title>Bielsko-Biała</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <header>
-        <h1>Witaj na mojej stronie o Bielsku-Białej!</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">O mnie</a></li>
-                <li><a href="projects.html">Projekty</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-<footer>
-        <p>...</p>
-    </footer>
-</body>
+
